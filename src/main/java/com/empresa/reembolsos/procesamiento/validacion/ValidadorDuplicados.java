@@ -1,17 +1,13 @@
 package com.empresa.reembolsos.procesamiento.validacion;
 
+import com.empresa.reembolsos.dominio.SolicitudReembolso;
+import org.springframework.stereotype.Component;
+
 import java.time.YearMonth;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
-
-import com.empresa.reembolsos.dominio.SolicitudReembolso;
-import com.empresa.reembolsos.infraestructura.RepositorioSolicitudesJpa;
-
 @Component
 public class ValidadorDuplicados extends ValidadorSolicitud {
-            @SuppressWarnings("unused")
-    private RepositorioSolicitudesJpa repositorio; // VIOLACION INTENCIONAL
 
     @Override
     protected ResultadoValidacion validarPropio(SolicitudReembolso solicitud,
